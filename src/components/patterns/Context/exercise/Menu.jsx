@@ -18,4 +18,4 @@ const Menu = ({ isOpen, children, pageWrapId, width, toggleMenu }) => (
   </div>
 )
 
-export default withWidth(Menu)
+export default withWidth()(Menu)

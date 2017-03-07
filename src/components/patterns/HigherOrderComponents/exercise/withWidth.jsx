@@ -4,10 +4,9 @@ export const SMALL = 1
 export const MEDIUM = 2
 export const LARGE = 3
 
-const withWidth = (MyComponent) => {
-  const largeWidth = 992,
-        mediumWidth = 768,
-        resizeInterval = 166
+const withWidth = (dimensions) => (MyComponent) => {
+
+  const {largeWidth = 1200, mediumWidth = 1105, resizeInterval = 2} = dimensions || {};
 
   return class WithWidth extends Component {
     constructor() {
@@ -58,6 +57,5 @@ const withWidth = (MyComponent) => {
     }
   }
 }
-
 
 export default withWidth
